@@ -10,11 +10,6 @@
     // Detect touch support
     $.support.touch = 'ontouchend' in document;
 
-    // Ignore browsers without touch support
-    if (!$.support.touch) {
-        return;
-    }
-
     var touchHandled;
 
     /**
@@ -59,6 +54,12 @@
 
     $.fn.extend({
         punch: function (target) {
+
+            // Ignore browsers without touch support
+            if (!$.support.touch) {
+                return;
+            }
+
             /**
              * Handle the touchstart events
              * @param {Object} event The widget element's touchstart event
