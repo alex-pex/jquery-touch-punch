@@ -36,13 +36,14 @@ Just follow these simple steps to enable touch events in your jQuery UI app:
     <script>$('#widget').draggable();</script>
     ```
 
-3b. Ok, there is a no 3: If you want to enable Touch Punch on an element which is not a handled by jQuery UI, you need to "punch" it!
+    If you want to enable Touch Punch on an element which is not a handled by jQuery UI, you need to "punch" it!
 
     ```js
     $(document).ready(function() {
         $(this).punch('.fc-draggable');
     });
     ```
-The event listener uses the delegate pattern, so you can attach the punch on document.ready and forget about it.
+
+    The event listener uses the delegate pattern, so you can attach the punch on document.ready and forget about it.
 
 _Tested on iPad, iPhone, Android and other touch-enabled mobile devices._
